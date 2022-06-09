@@ -7,8 +7,6 @@ import statistics
 df = pd.read_csv('medium_data.csv')
 data = df['reading_time'].tolist()
 
-fr = ff.create_distplot([data], ["reading_time"], show_hist=False)
-fr.show()
 
 reading_time_mean = statistics.mean(data)
 reading_time_std_deviation = statistics.stdev(data)
@@ -41,7 +39,3 @@ def setup():
     show_fig(mean_list)
 
 setup()
-    
-
-
-print(df['reading_time'])
